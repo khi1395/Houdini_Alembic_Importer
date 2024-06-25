@@ -1,0 +1,5 @@
+pinfo = hou.ui.readMultiInput("Project_settings",("Episode","Scene","Shot","FX Element","Frame Start","Frame End"),initial_contents = ("MH","03","002","FXHeathFire","0","240"), title = "Set Project Criterion", buttons = ("OK","Cancel"))
+filename ="_".join(pinfo[1][0:4])+"_v01_x01" 
+staticdir = r"D:\Kichenism\Houdini Learning\Test_Alembic_Importer"
+savedir = staticdir+"\\" +"_".join(pinfo[1][0:3])+"\\05_Houdini\\"+filename+".hipnc"
+hou.hipFile.save(savedir)
